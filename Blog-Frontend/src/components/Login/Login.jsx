@@ -24,18 +24,21 @@ const Login = () => {
     setisSubmit(true);
 
     try {
-      const url = "http://localhost:3000/auth/login";
+      const url = "https://blogapplication-l75i.onrender.com/auth/login";
       const { data: res } = await axios.post(url, data);
       localStorage.setItem("accessToken", res.accessToken);
       localStorage.setItem("userId", res._id);
       localStorage.setItem("userName", res.firstName + "  " + res.lastName);
       localStorage.setItem("author", res.username);
 
-    
       navigate("/");
       localStorage.setItem("role", "user");
     } catch (error) {
-      if (error.response && error.response.status >= 400 && error.response.status <= 500) {
+      if (
+        error.response &&
+        error.response.status >= 400 &&
+        error.response.status <= 500
+      ) {
         setError(error.response.data.message);
       }
     }
@@ -76,7 +79,9 @@ const Login = () => {
                 value={data.password}
                 className="input"
               />
-              {Valerror.password && <span className="error_msg">{Valerror.password}</span>}
+              {Valerror.password && (
+                <span className="error_msg">{Valerror.password}</span>
+              )}
               {error && <div className="error_msg">{error}</div>}
               <button type="submit" className="green_btn">
                 LOGIN

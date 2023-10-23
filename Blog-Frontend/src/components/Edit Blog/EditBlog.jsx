@@ -1,6 +1,6 @@
-import axios from 'axios';
+import axios from "axios";
 import React, { useEffect, useState } from "react";
-import './EditBlog.css'
+import "./EditBlog.css";
 import { useNavigate, useParams } from "react-router-dom";
 
 function EditBlog(props) {
@@ -14,7 +14,7 @@ function EditBlog(props) {
     content: "",
     category: "",
     authorId: authorId,
-    username: author
+    username: author,
   };
   const [editBlog, setEditBlog] = useState(initialState);
   const [isSubmit, setisSubmit] = useState(false);
@@ -24,7 +24,9 @@ function EditBlog(props) {
   useEffect(() => {
     async function getBlogData() {
       try {
-        const response = await axios.get(`http://localhost:3000/blog/${id}`);
+        const response = await axios.get(
+          `https://blogapplication-l75i.onrender.com/blog/${id}`
+        );
         setEditBlog(response.data);
 
         // Check if the current user is the author of the blog
@@ -38,7 +40,10 @@ function EditBlog(props) {
 
   async function updateBlog() {
     try {
-      await axios.put(`http://localhost:3000/blog/updateBlog/${id}`, editBlog);
+      await axios.put(
+        `https://blogapplication-l75i.onrender.com/blog/updateBlog/${id}`,
+        editBlog
+      );
     } catch (error) {
       console.log(error);
     }
@@ -60,7 +65,14 @@ function EditBlog(props) {
     setEditBlog({ ...editBlog, [event.target.name]: event.target.value });
   }
 
-  const categories = ['Technology', 'Travel', 'Food', 'Health', 'Science', 'Other'];
+  const categories = [
+    "Technology",
+    "Travel",
+    "Food",
+    "Health",
+    "Science",
+    "Other",
+  ];
 
   return (
     <div className="write">
@@ -69,7 +81,7 @@ function EditBlog(props) {
           <label htmlFor="fileInput">
             <i className="writeIcon fas fa-plus"></i>
           </label>
-          <input id="fileInput" type="file" style={{ display: 'none' }} />
+          <input id="fileInput" type="file" style={{ display: "none" }} />
           <input
             className="writeInput"
             placeholder="Title"
@@ -110,7 +122,6 @@ function EditBlog(props) {
           </button>
         )}
 
-        
         {isAuthor && (
           <div className="edit-delete-icons">
             <i className="fas fa-edit" onClick={handleEditClick}></i>

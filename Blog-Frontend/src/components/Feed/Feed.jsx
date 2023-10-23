@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 import "./Feed.css";
 
 export default function Feed({ img }) {
@@ -9,7 +9,9 @@ export default function Feed({ img }) {
   useEffect(() => {
     const getAllBlogs = async () => {
       try {
-        const response = await axios.get(`http://localhost:3000/blog/`);
+        const response = await axios.get(
+          `https://blogapplication-l75i.onrender.com/blog/`
+        );
         setAllBlogs(response.data);
       } catch (error) {
         console.error(error);
@@ -26,12 +28,13 @@ export default function Feed({ img }) {
     <>
       {sortedBlogs.map((blog, index) => (
         <div className="contenedor" key={index}>
-         <div className="img">
- 
-</div>
+          <div className="img"></div>
 
           <div className="contenido">
-            <Link style={{ color: 'inherit', textDecoration: 'inherit' }} to={{ pathname: `/viewBlog/${blog._id}` }}>
+            <Link
+              style={{ color: "inherit", textDecoration: "inherit" }}
+              to={{ pathname: `/viewBlog/${blog._id}` }}
+            >
               <h1>{blog.title}</h1>
               <p className="excerpt">{blog.content}</p>
               <div className="likes">

@@ -16,7 +16,9 @@ function ViewBlog() {
 
   const getBlog = async () => {
     try {
-      const data = await axios.get(`http://localhost:3000/blog/${id}`);
+      const data = await axios.get(
+        `https://blogapplication-l75i.onrender.com/blog/${id}`
+      );
       console.log("blog", data.data);
       setBlog(data.data);
       setLikeCount(data.data.likes);
@@ -27,9 +29,12 @@ function ViewBlog() {
 
   const incrementLikeCount = async () => {
     try {
-      await axios.put(`http://localhost:3000/blog/updateBlog/${id}`, {
-        likes: likeCount + 1,
-      });
+      await axios.put(
+        `https://blogapplication-l75i.onrender.com/blog/updateBlog/${id}`,
+        {
+          likes: likeCount + 1,
+        }
+      );
       setLikeCount(likeCount + 1);
       setLiked(!liked);
     } catch (e) {
@@ -39,7 +44,9 @@ function ViewBlog() {
 
   const DeleteBlog = (id) => {
     if (window.confirm("Are you sure?")) {
-      axios.delete(`http://localhost:3000/blog/deleteBlog/${id}`);
+      axios.delete(
+        `https://blogapplication-l75i.onrender.com/blog/deleteBlog/${id}`
+      );
       getBlog();
       navigate(`/`);
     }
@@ -71,12 +78,15 @@ function ViewBlog() {
               </Link>
             )}
             {isAuthor && (
-              <button className="icon-button" onClick={() => DeleteBlog(blog._id)}>
+              <button
+                className="icon-button"
+                onClick={() => DeleteBlog(blog._id)}
+              >
                 <i className="singlePostIcon far fa-trash-alt"></i>
               </button>
             )}
             <button
-              className={`icon-button ${liked ? 'fill-heart' : ''}`}
+              className={`icon-button ${liked ? "fill-heart" : ""}`}
               onClick={incrementLikeCount}
             >
               <i className="singlePostIcon far fa-heart"></i>
