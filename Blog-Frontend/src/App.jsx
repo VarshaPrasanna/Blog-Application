@@ -7,7 +7,7 @@ import PostBlog from './components/BLOG/PostBLog/PostBlog.jsx';
 import Feed from './components/Feed/Feed.jsx';
 import EditProfile from './components/Edit Profile/EditProfile.jsx';
 import ViewBlog from './components/BLOG/View Blog/ViewBlog.jsx';
-import EditBlog from './components/Edit Blog/EditBlog.jsX';
+import EditBlog from './components/Edit Blog/EditBlog.jsx';
 
 
 
