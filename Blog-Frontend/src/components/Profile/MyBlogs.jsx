@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import './Styles.css';
 import { Link } from 'react-router-dom';
+const firstName = localStorage.getItem("userName");
 
 function MyBlogs({ setUserLen, setLikes, props }) {
   const [userBlogs, setUserBlogs] = useState([]);
@@ -41,7 +42,7 @@ function MyBlogs({ setUserLen, setLikes, props }) {
                 <div className="card-content">
                   <h1>{blog.title}</h1>
                   <p className="excerpt">{blog.content}</p>
-                  <p className="author">By Jrom</p>
+                  <p className="author">{firstName}</p>
                 </div>
               </div>
             </Link>

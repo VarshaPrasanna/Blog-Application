@@ -31,12 +31,13 @@ function NavBar() {
       <nav>
       
         {!isLogged ? (
-          <ul className="top-menu list-inline mb-0 d-none d-lg-block" id="top-menu">
+          <ul className="ulClass" id="top-menu">
                           <li>
                 <Link to={{ pathname: "/" }} className="linkClass">
                   Home 
                 </Link>
                 </li>
+
             <li>
               <Link to={{ pathname: "/login" }} className="linkClass">
                 Login
