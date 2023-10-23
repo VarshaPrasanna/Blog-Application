@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+.main{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url(images/back.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.profile-card {
+  flex-direction: column;
+  max-width: 400px;
+  width: 100%;
+  border-radius: 25px;
+  padding: 30px;
+  border: 1px solid #ffffff40;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+  position: absolute;
+  top: 0; /* Position it at the top */
+  right: 0; /* Position it at the right */
+  margin-right: 10px;
+  margin-top: 110px;
+  background-color: #89bcff;
+}
+
+.image{
+  position: relative;
+  height: 150px;
+  width: 150px;
+ margin-left: 120px;
+}
+
+.data{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 15px;
+}
+.data h2{
+  font-size: 33px;
+  font-weight: 600;
+}
+span{
+  font-size: 18px;
+}
+.row{
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+}
+
+
+.row .info {
+  text-align: center;
+  padding: 0 20px;
+  display: flex; /* Center horizontally */
+  justify-content: center; /* Center horizontally */
+}
+.buttons .btn {
+  color: #fff;
+  align-items: center;
+  text-decoration: none;
+  margin: 0 auto; /* Center horizontally */
+  padding: 8px 25px;
+  border-radius: 25px;
+  font-size: 18px;
+  white-space: nowrap;
+  background: #6e0d6e;
+}
+
+.buttons{
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+}
+.excerpt {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 1; /* You can adjust this value to limit to 3 lines (roughly 50 words) */
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+}
+
+
+.buttons .btn:hover{
+  box-shadow: inset 0 5px 20px rgba(0,0,0,0.4);
+}
+.containerPost {
+ 
+  height: 100vh;
+  display: flex;
+  padding-left: 0%;
+}
+.cardabc {
+  background-color: #D7CCC8;
+
+  border-radius: 10px;
+  display: grid;
+  height: 200px;
+  width:800px;
+ margin-bottom: 10px;
+ margin-top: 10px;
+  
+}
+.cardabc .img-container {
+  width: 180px;
+  height: 100%;
+  display: flex;
+  background-color: #c1b7b4;
+  background-image: url('https://www.dropbox.com/s/7d5qt5wb2xpqeww/city-street.jpg?raw=1');
+  background-size: cover;
+  
+ 
+}
+.card-content {
+  grid-column: 2/3;
+  padding: 5px 50px;
+  
+}
+h2 {
+  text-transform: uppercase;
+  color: #555;
+}
+h1 {
+  margin-bottom: 0;
+}
+.card-content .author {
+ 
+  font-weight: 700;
+  margin-top: 25px;
+  padding: 25px 0 10px 0;
+  
+}
+
+@media only screen and (max-width:600px) {
+  .card {
+    display: block;
+  }
+  .card .img-container {
+    height: 250px;
+    width: 100%;
+  }
+  .card-content {
+    border: 0;
+    border-top: 1px solid #ccc;
+  }
+}

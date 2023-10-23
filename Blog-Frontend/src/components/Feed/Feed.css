@@ -1,0 +1,59 @@
+.contenedor {
+  display: flex;
+  box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.2);
+  margin-top: 10px;
+  max-width: 2000px; /* Adjust this value as needed */
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #b19cd9;
+}
+
+
+.img {
+  flex: 1;
+  background-image: url("https://render.fineartamerica.com/images/images-profile-flow/400/images/artworkimages/mediumlarge/3/the-great-vapor-aesthetics-vincent-trinidad.jpg" );
+  background-size: cover; /* Adjust to your image size preferences */
+  background-repeat: no-repeat;
+  min-height: 300px;
+  height: auto;
+}
+
+.contenido {
+  flex: 2;
+  background-color: #fffa90;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.excerpt {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* Adjust this value to limit to 3 lines (roughly 50 words) */
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+}
+
+h1 {
+  margin: 0;
+}
+
+.link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+.likes {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.likes i {
+  color: red; 
+  margin-right: 5px; 
+}

@@ -1,0 +1,12 @@
+const express = require('express');
+const router = express.Router();
+const blogController = require('../controller/BlogController');
+//const authMiddleware = require('../middlewares/authMiddleware');
+router.post('/createBlog/',blogController.createBlog );
+router.get('/:id', blogController.getBlogById);
+router.get('/myBlogs/:authorId', blogController.getBlogByauthorId);
+router.get('/', blogController.getAllBlogs);
+router.put('/updateBlog/:id', blogController.updateBlog);
+router.delete('/deleteBlog/:id', blogController.deleteBlog);
+router.get('/getFeed/', blogController.getFeed);
+module.exports = router;

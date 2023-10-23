@@ -1,0 +1,33 @@
+header {
+  background-color: #b19cd9;
+  height: 60px;
+  width: 95vw;
+  margin: auto;
+  margin-top: 20px;
+  border-radius: 50px;
+}
+.ulClass {
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 18px;
+}
+.linkClass {
+  color: white;
+  text-decoration: none;
+  font-size: 22px;
+  margin-left: 100px;
+}
+.linkClass > :hover {
+  color: #e8b020;
+  text-transform: uppercase;
+  border-bottom: 2px solid aqua;
+}
+/* Remove bullets from unordered list */
+ul {
+  list-style-type: none;
+}
+
+/* Remove numbers from ordered list */
+ol {
+  list-style-type: none;
+}
