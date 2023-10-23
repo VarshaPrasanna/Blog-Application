@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import "./NavBar.css"
+import "./Navbar.css"
+
 
 const firstName = localStorage.getItem("userName");
 

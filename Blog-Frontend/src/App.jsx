@@ -1,4 +1,4 @@
-import NavBar from './components/Navbar/NavBar.jsx'
+import NavBar from "./components/Navbar/NavBar";
 import "./styles.css"
 import Login from './components/Login/Login.jsx'
 import Signup from './components/Signup/Signup.jsx';
